@@ -6,8 +6,9 @@ let
     la = "ls -a";
     lla = "ls -a -l";
     ".." = "cd ..";
-    "nfu" = "nix flake update --flake ~/.nix --extra-experimental-features flakes";
-    "hms" = "home-manager switch --flake ~/.nix --extra-experimental-features flakes";
+    nfu = "nix flake update --flake ~/.nix --extra-experimental-features flakes";
+    hms = "home-manager switch --flake ~/.nix --extra-experimental-features flakes";
+    fzf = "fzf --preview='bat --color=always {}'";
   };
 in 
 {
@@ -62,6 +63,14 @@ in
             command = "github.copilot.completions.disable";
           }
       ];
+    };
+    kitty = {
+      enable = true;
+      settings = {
+        font_family = "JetBrainsMono NF";
+        font_size = 16;
+      };
+      themeFile = "tokyo_night_storm";
     };
   };
 }

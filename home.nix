@@ -28,7 +28,9 @@
     neovim
     vscode
     bat
+    fzf
     kitty
+    jetbrains-toolbox
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
